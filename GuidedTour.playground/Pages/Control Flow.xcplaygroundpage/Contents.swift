@@ -13,6 +13,18 @@ for score in individualScores {
 }
 print(teamScore)
 
+
+
+// self study
+
+let myApples = ["big", "small", "medium"]
+var bigApple = "big"
+for anApple in myApples {
+    if anApple == bigApple {
+        print(anApple)
+    }
+}
+
 //: In an `if` statement, the conditional must be a Boolean expression—this means that code such as `if score { ... }` is an error, not an implicit comparison to zero.
 //:
 //: You can use `if` and `let` together to work with values that might be missing. These values are represented as optionals. An optional value either contains a value or contains `nil` to indicate that a value is missing. Write a question mark (`?`) after the type of a value to mark the value as optional.
@@ -26,6 +38,22 @@ if let name = optionalName {
     greeting = "Hello, \(name)"
 }
 
+
+// self study
+var myString: String? =  "Hello"
+print("test", myString == nil)
+
+var myName: String? = "John"
+var myGreeting = "How are you?"
+
+if let name = myName {
+    myGreeting = "Hello, \(name)"
+}
+print(myGreeting)
+
+
+
+
 //: - Experiment:
 //: Change `optionalName` to `nil`. What greeting do you get? Add an `else` clause that sets a different greeting if `optionalName` is `nil`.
 //:
@@ -36,6 +64,15 @@ if let name = optionalName {
 let nickName: String? = nil
 let fullName: String = "John Appleseed"
 let informalGreeting = "Hi \(nickName ?? fullName)"
+print(informalGreeting)
+
+
+// self study
+let myNickname: String? = nil
+let myFullName: String = "Shannon Appleseed"
+let myInforalGreeting = "Hi \(myNickname ?? myFullName)"
+print(myInforalGreeting)
+
 
 //: Switches support any kind of data and a wide variety of comparison operations—they aren’t limited to integers and tests for equality.
 //:
@@ -49,6 +86,19 @@ switch vegetable {
         print("Is it a spicy \(x)?")
     default:
         print("Everything tastes good in soup.")
+}
+
+// self study
+let fruit = "red apple"
+switch fruit {
+    case "banana":
+    print("I got a banana")
+    case "peach", "orange":
+    print("I got my favorite fruits")
+    case let x where x.hasSuffix("apple") :
+    print("Is it a big \(x)")
+default:
+    print("I got nothing")
 }
 
 //: - Experiment:
@@ -75,6 +125,30 @@ for (kind, numbers) in interestingNumbers {
 }
 print(largest)
 
+
+// self study
+let myNumbers = [
+"good": [2, 3, 4],
+"great": [3, 4, 5],
+"soso": [1, 2, 3],
+]
+
+var smallest = 100
+
+for (level, numbers) in myNumbers {
+    if level == "good" {
+        print(level)
+    }
+    for aNumber in numbers {
+        if aNumber < smallest {
+            smallest = aNumber
+        }
+    }
+    
+}
+print("\(smallest)" + "w")
+
+
 //: - Experiment:
 //: Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
 //:
@@ -92,6 +166,19 @@ repeat {
 } while m < 100
 print(m)
 
+// self study
+var x = 2
+while x < 2 {
+    x = x * 2
+}
+print("x = \(x)")
+
+var y = 2
+repeat {
+    y = y * 2
+} while(y < 2)
+print("y = \(y)")
+
 //: You can keep an index in a loop by using `..<` to make a range of indexes.
 //:
 var total = 0
@@ -100,8 +187,20 @@ for i in 0..<4 {
 }
 print(total)
 
+var sum1 = 0
+for i in 0..<3 {
+    sum1 += i
+}
+print("sum1 = \(sum1)")
+
 //: Use `..<` to make a range that omits its upper value, and use `...` to make a range that includes both values.
 //:
 
+// self study
+var sum2 = 0
+for i in 0...3 {
+    sum2 += i
+}
+print("sum2 = \(sum2)")
 
 //: [Previous](@previous) | [Next](@next)

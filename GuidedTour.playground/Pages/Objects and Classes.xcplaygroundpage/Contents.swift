@@ -7,7 +7,15 @@ class Shape {
     func simpleDescription() -> String {
         return "A shape with \(numberOfSides) sides."
     }
+    
+    let is2D = true
+    
+    func circumference(isTriangle: Bool) -> Float {
+        return 100
+    }
+
 }
+
 
 //: - Experiment:
 //: Add a constant property with `let`, and add another method that takes an argument.
@@ -31,6 +39,25 @@ class NamedShape {
     func simpleDescription() -> String {
        return "A shape with \(numberOfSides) sides."
     }
+}
+
+// self study
+
+class myShape {
+    var numberOfSides: Int = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+    
+    
+    
+    
 }
 
 //: Notice how `self` is used to distinguish the `name` property from the `name` argument to the initializer. The arguments to the initializer are passed like a function call when you create an instance of the class. Every property needs a value assigned—either in its declaration (as with `numberOfSides`) or in the initializer (as with `name`).
@@ -61,6 +88,28 @@ class Square: NamedShape {
 let test = Square(sideLength: 5.2, name: "my test square")
 test.area()
 test.simpleDescription()
+
+
+// self study
+class MySqure: myShape {
+    var sideLengt: Double
+    
+    init(sideLength: Double, name: String) {
+//        sideLengt = sideLength
+        self.sideLengt = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    
+    func area() ->  Double {
+        return sideLengt * sideLengt
+    }
+    
+    override func simpleDescription() -> String {
+        return super.simpleDescription()
+    }
+    
+}
 
 //: - Experiment:
 //: Make another subclass of `NamedShape` called `Circle` that takes a radius and a name as arguments to its initializer. Implement an `area()` and a `simpleDescription()` method on the `Circle` class.
