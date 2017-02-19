@@ -97,6 +97,7 @@ ovenLight.next()
 ovenLight.next()
 
 // ==================== Type Methods ===========================
+// You indicate type methods by writing the `static` keyword before the method’s func keyword. Classes may also use the `class` keyword to allow subclasses to override the superclass’s implementation of that method.
 class SomeClass {
     class func someTypeMethod() {
         

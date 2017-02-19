@@ -12,7 +12,7 @@ func greet(person: String) -> String {
     return greeting
 }
 
-print(greet(person: "Anna"))
+//print(greet("Anna"))  // this report a compile-time error ---- Missing argument label 'person' in call
 print(greet(person: "Brian"))
 
 

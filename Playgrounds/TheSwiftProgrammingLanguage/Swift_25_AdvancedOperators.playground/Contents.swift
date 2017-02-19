@@ -2,24 +2,22 @@
 
 import UIKit
 
-//////////////////////////////  Initialization //////////////////////////////
-
-// ========= Setting Initial Values for Stored Properties =================
+//////////////////////////////  Advanced Operators //////////////////////////////
 
 
-// ======================== Customizing Initialization =====================
+// ======================== Bitwise Operators =====================
 
 
-// ======================== Default Initializers =====================
+// ======================== Overflow Operators =====================
 
-// =================== Initializer Delegation for Value Types ====================
+// =================== Precedence and Associativity ====================
 
 
-// =================== Class Inheritance and Initialization ====================
+// =================== Operator Methods ====================
 
 
 // ======================== Failable Initializers =====================
 
 
 
-// ===== Setting a Default Property Value with a Closure or Function =============
+// ========================= Custom Operators ============================

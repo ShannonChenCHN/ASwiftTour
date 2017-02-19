@@ -2,24 +2,31 @@
 
 import UIKit
 
-//////////////////////////////  Initialization //////////////////////////////
+//////////////////////////////  Generics //////////////////////////////
 
-// ========= Setting Initial Values for Stored Properties =================
-
-
-// ======================== Customizing Initialization =====================
+// ========= The Problem That Generics Solve =================
 
 
-// ======================== Default Initializers =====================
-
-// =================== Initializer Delegation for Value Types ====================
+// ======================== Generic Functions =====================
 
 
-// =================== Class Inheritance and Initialization ====================
+// ======================== Type Parameters =====================
+
+// =================== Naming Type Parameters ====================
 
 
-// ======================== Failable Initializers =====================
+// =================== Generic Types ====================
 
 
+// ======================== Extending a Generic Type =====================
 
-// ===== Setting a Default Property Value with a Closure or Function =============
+
+// ======================== Type Constraints =====================
+
+
+// ======================== Associated Types =====================
+
+// ======================== Generic Where Clauses =====================
+
+
+// ======================== Extensions with a Generic Where Clause ====================
