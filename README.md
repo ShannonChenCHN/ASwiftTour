@@ -160,9 +160,8 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
     - Combine Assignment (`=`) with Another Operation
     - `++` is not supported in Swift
 
-> Reference 
-
-For a complete list of the compound assignment operators provided by the Swift standard library, see Swift Standard Library Operators Reference.
+> Reference               
+> For a complete list of the compound assignment operators provided by the Swift standard library, see *[Swift Standard Library Operators Reference](https://developer.apple.com/reference/swift/swift_standard_library_operators)*.
 
 - Comparison Operators
     - Swift supports all standard C comparison operators
