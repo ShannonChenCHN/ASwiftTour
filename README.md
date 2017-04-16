@@ -38,6 +38,12 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
 
 
 ## [The Basics](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+- Overview
+    - Fundamental C and Objective-C Types(Int, Double, Float, Bool, String, Array, Set, Dictionary)
+    - Variables and Constants
+    - Advanced Types(like tuples)
+    - Optional Types
+    - Type Safety
 - Constants and Variables
     - Declaring Constants and Variables
         - Constants
@@ -122,7 +128,73 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
     - Debugging with Assertions
     - When to Use
 
-## Basic Operators
+## [Basic Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#//apple_ref/doc/uid/TP40014097-CH6-ID60)
+- Overview
+    - What is Operator
+    - What Beyond C
+        - Assignment Operator
+        - Detecting and Disallowing Value Overflow
+        - Range Operators
+        - Advanced Operators
+
+- Terminology
+    - Unary
+    - Binary
+    - Ternary
+
+- Assignment Operator(`=`)
+    - The assignment operator in Swift does not itself return a value
+
+- Arithmetic Operators
+    - Addition(`+`)
+        - String Concatenation(`"a" + "b"`)
+    - Substraction(`-`)
+    - Multiplication(`*`)
+    - Division(`/`)
+    - Disallowing Overflow
+    - Remainder Operator(`%`)
+    - Unary Minus Operator
+    - Unary Plus Operator
+
+- Compound Assignment Operators
+    - Combine Assignment (`=`) with Another Operation
+    - `++` is not supported in Swift
+
+> Reference 
+
+For a complete list of the compound assignment operators provided by the Swift standard library, see Swift Standard Library Operators Reference.
+
+- Comparison Operators
+    - Swift supports all standard C comparison operators
+        - Equal to (`a == b`)
+        - Not equal to (`a != b`)
+        - Greater than (`a > b`)
+        - Less than (`a < b`)
+        - Greater than or equal to (`a >= b`)
+        - Less than or equal to (`a <= b`)
+    - Swift also provides two identity operators (`===` and `!==`) for object Comparison
+    - Tuple Comparison
+
+- Ternary Conditional Operator
+    - Form: `question ? answer1 : answer2`
+    - Use the ternary conditional operator with care
+
+- Nil-Coalescing Operator
+    - Form: `a ?? b`
+    - Underlying Expression: ` a != nil ? a! : b`
+
+- Range Operators
+    - Closed Range Operator(`a...b`)
+    - Half-Open Range Operator(`a..<b`)
+
+- Logical Operators
+    - Logical operators modify or combine the **Boolean** logic values true and false
+    - Logical NOT Operator(`!a`)
+    - Logical AND Operator(`a && b`)
+    - Logical OR Operator(`a || b`)
+    - Combining Logical Operators: The Swift logical operators `&&` and `||` are left-associative
+    - Readability is always preferred over brevity, use parentheses where they help to make your intentions clear
+
 ## Strings and Characters
 ## Collection Types
 ## Control Flow
