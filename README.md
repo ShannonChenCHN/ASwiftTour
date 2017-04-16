@@ -160,7 +160,7 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
     - Combine Assignment (`=`) with Another Operation
     - `++` is not supported in Swift
 
-> Reference                       
+> **Note**                       
 For a complete list of the compound assignment operators provided by the Swift standard library, see *[Swift Standard Library Operators Reference](https://developer.apple.com/reference/swift/swift_standard_library_operators)*.
 
 - Comparison Operators
@@ -228,7 +228,7 @@ For a complete list of the compound assignment operators provided by the Swift s
     - Append a `Character` value to a `String` bu using `append()` method
 
 - String Interpolation
-> “*String interpolation* is a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside a string literal. "
+    > “*String interpolation* is a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside a string literal. "
 
 - Unicode
     - What is Unicode?
@@ -259,7 +259,7 @@ For a complete list of the compound assignment operators provided by the Swift s
 - Comparing Strings
     - String and Character Equality(`==`, `!=`)
     - Prefix and Suffix Equality(` hasPrefix(_:)`, `hasSuffix(_:)`)
-> Two String values (or two Character values) are considered equal if their extended grapheme clusters are canonically equivalent. Extended grapheme clusters are canonically equivalent if they have the same linguistic meaning and appearance, even if they are composed from different Unicode scalars behind the scenes.
+    > Two String values (or two Character values) are considered equal if their extended grapheme clusters are canonically equivalent. Extended grapheme clusters are canonically equivalent if they have the same linguistic meaning and appearance, even if they are composed from different Unicode scalars behind the scenes.
 - Unicode Representations of Strings
     - UTF-8 Representation
     - UTF-16 Representation
