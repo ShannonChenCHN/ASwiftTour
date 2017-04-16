@@ -266,7 +266,55 @@ For a complete list of the compound assignment operators provided by the Swift s
     - Unicode Scalar Representation
 
 ## Collection Types
-    
+- Generic Collections
+- Mutability of Collections
+    - Variable -> Mutable
+    - Constant -> Immutable
+    - It is good practice to create immutable collections in all cases where the collection does not need to change
+- Arrays
+    - Array Type Shorthand Syntax
+        - Array type: `Array<Element>`
+        - Array Type Shorthand: `[Element]`
+    - Creating an Empty Array(`var someInts = [Int]()`)
+
+    - Creating an Array with a Default Value(`var threeDoubles = Array(repeating: 0.0, count: 3)`)
+    - Creating an Array by Adding Two Arrays Together
+        - Using addition operator (+)
+    - Creating an Array with an Array Literal(`[value 1, value 2, value 3]`)
+    - Accessing and Modifying an Array
+        - `count`
+        - `isEmpty`
+        - `append(_:)` : add new item
+        - `+=` :  append an array
+        - `var firstItem = shoppingList[0]`:
+        - `shoppingList[0] = "Six eggs"`
+        - `shoppingList[4...6] = ["Bananas", "Apples"]`
+        - `shoppingList.insert("Maple Syrup", at: 0)`
+        - `let mapleSyrup = shoppingList.remove(at: 0)`
+        - `let apples = shoppingList.removeLast()`
+    - Iterating Over an Array
+        - Normal Iteration
+        - `enumerated()` method
+
+- Sets
+    - Hash Values for Set Types
+    - Set Type Syntax: `Set<Element>`
+    - Creating and Initializing an Empty Set
+    - Creating a Set with an Array Literal
+    - Accessing and Modifying a Set
+    - Iterating Over a Set
+
+- Performing Set Operations
+    - Fundamental Set Operations
+    - Set Membership and Equality
+
+- Dictionaries
+    - Dictionary Type Shorthand Syntax
+    - Creating an Empty Dictionary
+    - Creating a Dictionary with a Dictionary Literal
+    - Accessing and Modifying a Dictionary
+    - Iterating Over a Dictionary
+
 
 ## Control Flow
 
