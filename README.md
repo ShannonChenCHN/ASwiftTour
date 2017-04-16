@@ -121,9 +121,8 @@ This list is intended for consolidating the content of *The Swift Programming La
     - When to Use
 
 > Resources
->
-    - [playground](./TheSwiftProgrammingLanguage/Swift_1_TheBasics.playground)
-    - [documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
+- [playground](./TheSwiftProgrammingLanguage/Swift_1_TheBasics.playground)
+- [documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
 
 ## Basic Operators
 ## Strings and Characters
