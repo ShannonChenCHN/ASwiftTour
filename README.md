@@ -4,6 +4,7 @@
 
 # About
 A outline to sketch the content in *The Swift Programming Language(3.1)*.
+
 This list is intended for consolidating the content of *The Swift Programming Language(3.1)* and forming a sturctured understanding of Swift. 
 
 ## Contents
@@ -120,6 +121,7 @@ This list is intended for consolidating the content of *The Swift Programming La
     - When to Use
 
 > Resources
+>
     - [playground](./TheSwiftProgrammingLanguage/Swift_1_TheBasics.playground)
     - [documentation](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309)
 
