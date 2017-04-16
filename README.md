@@ -160,8 +160,8 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
     - Combine Assignment (`=`) with Another Operation
     - `++` is not supported in Swift
 
-> Reference               
-> For a complete list of the compound assignment operators provided by the Swift standard library, see *[Swift Standard Library Operators Reference](https://developer.apple.com/reference/swift/swift_standard_library_operators)*.
+> Reference                       
+For a complete list of the compound assignment operators provided by the Swift standard library, see *[Swift Standard Library Operators Reference](https://developer.apple.com/reference/swift/swift_standard_library_operators)*.
 
 - Comparison Operators
     - Swift supports all standard C comparison operators
@@ -195,8 +195,81 @@ The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/
     - Readability is always preferred over brevity, use parentheses where they help to make your intentions clear
 
 ## Strings and Characters
+- Overview
+    - What is String
+    - Unicode-compliant
+    - Lightweight and Readable in Syntax
+    - String Concatenation
+    - String Interpolation
+    - Every string is composed of encoding-independent Unicode characters
+    - Swift’s String type is bridged with Foundation’s NSString class
+
+- String Literals
+
+- Initializing an Empty String
+    - Assign an empty string literal to a variable(`var emptyString = ""`)
+    - Initialize a new `String` instance with initializer syntax(`var anotherEmptyString = String()`)
+
+- String Mutability
+    - Variable -> Mutable(`var variableString = "Horse"`)
+    - Constant -> Immutable(`let constantString = "Highlander"`)
+
+- Strings Are Value Types
+    - Copy-by-default String behavior
+    - Swift’s compiler optimization on copying
+
+- Working with Characters
+    - String -> Characters：Access the individual `Character` values by `String`'s property `characters`
+    - Characters -> String: `String` values can be constructed by passing an array of Character values as an argument to its initializer
+
+- Concatenating Strings and Characters
+    - Add `String` values together with operator `+`
+    - Append a `String` value to a `String` by using operator `+=`
+    - Append a `Character` value to a `String` bu using `append()` method
+
+- String Interpolation
+> “*String interpolation* is a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside a string literal. "
+
+- Unicode
+    - What is Unicode?
+        > Unicode is an international standard for encoding, representing, and processing text in different writing systems. It enables you to represent almost any character from any language in a standardized form, and to read and write those characters to and from an external source such as a text file or web page. 
+    - Unicode Scalars
+        - Swift’s native String type is built from Unicode scalar values
+        - A Unicode scalar is a unique 21-bit number for a character or modifier
+    - Special Characters in String Literals
+        - String literals can include the following special characters
+            - The escaped special characters `\0` (null character), `\\` (backslash), `\t` (horizontal tab), `\n` (line feed), `\r` (carriage return), `\"` (double quote) and `\'` (single quote)
+            - An arbitrary Unicode scalar, written as `\u{n}`, where `n` is a 1–8 digit hexadecimal number with a value equal to a valid Unicode code point
+    - Extended Grapheme Clusters
+        - Every instance of Swift’s `Character` type represents a single extended grapheme cluster
+        - An extended grapheme cluster is a sequence of one or more Unicode scalars that (when combined) produce a single human-readable character
+
+- Counting Characters
+    - To retrieve a count of the Character values in a string, use the count property of the string’s characters property
+    - Swift’s use of extended grapheme clusters for Character values means that string concatenation and modification may not always affect a string’s character count
+
+- Accessing and Modifying a String
+    - String Indices
+        - Each `String `value has an associated index type, `String.Index`, which corresponds to the position of each `Character` in the string
+        - Swift strings cannot be indexed by integer values
+        - Properties and Methods: `endIndex`, `startIndex`, `indices`, `index(before:)`, `index(after:)`, `index(_:offsetBy:)`
+    - Inserting and Removing
+        - Methods: `insert(_:at:)`, `insert(contentsOf:at:)`, `remove(at:)`, `removeSubrange(_:)`
+
+- Comparing Strings
+    - String and Character Equality(`==`, `!=`)
+    - Prefix and Suffix Equality(` hasPrefix(_:)`, `hasSuffix(_:)`)
+> Two String values (or two Character values) are considered equal if their extended grapheme clusters are canonically equivalent. Extended grapheme clusters are canonically equivalent if they have the same linguistic meaning and appearance, even if they are composed from different Unicode scalars behind the scenes.
+- Unicode Representations of Strings
+    - UTF-8 Representation
+    - UTF-16 Representation
+    - Unicode Scalar Representation
+
 ## Collection Types
+    
+
 ## Control Flow
+
 ## Functions
 ## Closures
 ## Enumerations
