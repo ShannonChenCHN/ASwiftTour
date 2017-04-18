@@ -194,7 +194,7 @@ For a complete list of the compound assignment operators provided by the Swift s
     - Combining Logical Operators: The Swift logical operators `&&` and `||` are left-associative
     - Readability is always preferred over brevity, use parentheses where they help to make your intentions clear
 
-## Strings and Characters
+## [Strings and Characters](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285)
 - Overview
     - What is String
     - Unicode-compliant
@@ -265,7 +265,7 @@ For a complete list of the compound assignment operators provided by the Swift s
     - UTF-16 Representation
     - Unicode Scalar Representation
 
-## Collection Types
+## [Collection Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
 - Generic Collections
 - Mutability of Collections
     - Variable -> Mutable
@@ -347,7 +347,45 @@ For a complete list of the compound assignment operators provided by the Swift s
         - `sorted()`
 
 
-## Control Flow
+## [Control Flow](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120)
+- For-In Loops
+    - Usage: Iterate over a sequence, such as ranges of numbers, items in an array, or characters in a string
+    - Ignore the values by using an underscore in place of a variable name
+
+- While Loops
+    - `While`
+    - `Repeat-While`
+
+- Conditional Statements
+    - If
+    - Switch
+        - No Implicit Fallthrough
+            - `switch` statements not fall through the bottom of each case and into the next one by default.
+            - The body of each case must contain at least one executable statement.
+        - Interval Matching(`case: 1..<5:`)
+        - Tuples
+            - Wild pattern: underscore character (`case (_, 0):`)
+            - If multiple matches are possible, the first matching case is always used.
+        - Value Bindings(`case (0, let y):`)
+        - Where(`case let (x, y) where x == y:`)
+        - Compound Cases(`case "a", "e":`)
+
+- Control Transfer Statements
+    - Continue
+    - Break
+        - Break in a Loop Statement
+        - Break in a Switch Statement
+            > Because Swift’s switch statement is exhaustive and does not allow empty cases, it is sometimes necessary to deliberately match and ignore a case in order to make your intentions explicit. You do this by writing the break statement as the entire body of the case you want to ignore.
+    - Fallthrough
+            > Note: The fallthrough keyword does not check the case conditions for the switch case that it causes execution to fall into. 
+    - Labeled Statements
+        -  if you have multiple nested loops, it can be useful to be explicit about which loop the continue statement should affect.
+        - Usage: mark a loop statement or conditional statement with a statement label. 
+- Early Exit
+        - You use a `guard` statement to require that a condition must be true in order for the code after the guard statement to be executed.
+        - Any variables or constants that were assigned values using an optional binding as part of the condition are available for the rest of the code block that the `guard` statement appears in.
+- Checking API Availability
+        - Availability condition: `if #available(platform name version, ..., *)`
 
 ## Functions
 ## Closures
