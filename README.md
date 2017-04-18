@@ -378,7 +378,7 @@ For a complete list of the compound assignment operators provided by the Swift s
         - Break in a Switch Statement
             > Because Swift’s switch statement is exhaustive and does not allow empty cases, it is sometimes necessary to deliberately match and ignore a case in order to make your intentions explicit. You do this by writing the break statement as the entire body of the case you want to ignore.
     - Fallthrough
-            > Note: The fallthrough keyword does not check the case conditions for the switch case that it causes execution to fall into. 
+        > Note: The fallthrough keyword does not check the case conditions for the switch case that it causes execution to fall into. 
     - Labeled Statements
         -  if you have multiple nested loops, it can be useful to be explicit about which loop the continue statement should affect.
         - Usage: mark a loop statement or conditional statement with a statement label. 
