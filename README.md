@@ -383,10 +383,10 @@ For a complete list of the compound assignment operators provided by the Swift s
         -  if you have multiple nested loops, it can be useful to be explicit about which loop the continue statement should affect.
         - Usage: mark a loop statement or conditional statement with a statement label. 
 - Early Exit
-        - You use a `guard` statement to require that a condition must be true in order for the code after the guard statement to be executed.
-        - Any variables or constants that were assigned values using an optional binding as part of the condition are available for the rest of the code block that the `guard` statement appears in.
+    - You use a `guard` statement to require that a condition must be true in order for the code after the guard statement to be executed.
+    - Any variables or constants that were assigned values using an optional binding as part of the condition are available for the rest of the code block that the `guard` statement appears in.
 - Checking API Availability
-        - Availability condition: `if #available(platform name version, ..., *)`
+    - Availability condition: `if #available(platform name version, ..., *)`
 
 ## Functions
 ## Closures
