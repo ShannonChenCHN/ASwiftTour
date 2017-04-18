@@ -272,6 +272,7 @@ For a complete list of the compound assignment operators provided by the Swift s
     - Constant -> Immutable
     - It is good practice to create immutable collections in all cases where the collection does not need to change
 - Arrays
+    - Swift’s `Array` type is bridged to Foundation’s `NSArray` class.
     - Array Type Shorthand Syntax
         - Array type: `Array<Element>`
         - Array Type Shorthand: `[Element]`
@@ -297,23 +298,53 @@ For a complete list of the compound assignment operators provided by the Swift s
         - `enumerated()` method
 
 - Sets
-    - Hash Values for Set Types
+    - Swift’s `Set` type is bridged to Foundation’s `NSSet` class.
+    - Hash Values for Set Types: A type must be hashable in order to be stored in a set
     - Set Type Syntax: `Set<Element>`
-    - Creating and Initializing an Empty Set
-    - Creating a Set with an Array Literal
+    - Creating and Initializing an Empty Set(`var letters = Set<Character>()`)
+    - Creating a Set with an Array Literal(`var favoriteGenres: Set<String> = ["Rock”]`)
     - Accessing and Modifying a Set
+        - `count`
+        - `isEmpty`
+        - `insert(_:)`
+        - `remove(_:)`
+        - `removeAll()`
+        - `contains(_:)`
     - Iterating Over a Set
+        -  use the `sorted()` method
 
 - Performing Set Operations
     - Fundamental Set Operations
+        - `intersection(_:)` 
+        - `symmetricDifference(_:)` 
+        - `union(_:)`
+        - `subtracting(_:)`
     - Set Membership and Equality
+        - “is equal” operator (`==`) 
+        - `isSubset(of:)`
+        - `isSuperset(of:)`
+        - `isStrictSubset(of:)` and `isStrictSuperset(of:)`
+        - `isDisjoint(with:)`
 
 - Dictionaries
+    - Swift’s `Dictionary` type is bridged to Foundation’s `NSDictionary` class.
     - Dictionary Type Shorthand Syntax
-    - Creating an Empty Dictionary
-    - Creating a Dictionary with a Dictionary Literal
+        - Full form: `Dictionary<Key, Value>`
+        - Shorthand form: `[Key: Value]`
+    - Creating an Empty Dictionary(`var namesOfIntegers = [Int: String]()`)
+    - Creating a Dictionary with a Dictionary Literal(`[key 1: value 1, key 2: value 2, key 3: value 3]`)
     - Accessing and Modifying a Dictionary
+        - `count`
+        - `isEmpty`
+        - `airports["LHR"] = "London"`
+        - `updateValue(_:forKey:) `
+        - `let airportName = airports["DUB"]`
+        - `airports["DUB"] = nil`
+        - `removeValue(forKey:)`
     - Iterating Over a Dictionary
+        - iterate over the key-value pairs in a dictionary with a for-in loop
+        - `keys` and `values`
+        - `sorted()`
 
 
 ## Control Flow
