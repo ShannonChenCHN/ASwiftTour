@@ -267,6 +267,7 @@ For a complete list of the compound assignment operators provided by the Swift s
 
 ## [Collection Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID105)
 - Generic Collections
+    - What is generic type
 - Mutability of Collections
     - Variable -> Mutable
     - Constant -> Immutable
