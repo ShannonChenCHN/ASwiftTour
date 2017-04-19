@@ -388,7 +388,7 @@ For a complete list of the compound assignment operators provided by the Swift s
 - Checking API Availability
     - Availability condition: `if #available(platform name version, ..., *)`
 
-## Functions
+## [Functions](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
 
 - Defining and Calling Functions
     ```
@@ -473,23 +473,258 @@ For a complete list of the compound assignment operators provided by the Swift s
         ```
 - Nested Functions
 
-## Closures
-## Enumerations
-## Classes and Structures
-## Properties
-## Methods
-## Subscripts
-## Inheritance
-## Initialization
-## Deinitialization
-## Automatic Reference Counting
-## Optional Chaining
-## Error Handling
-## Type Casting
-## Nested Types
-## Extensions
-## Protocols
-## Generics
-## Access Control
-## Advanced Operators
+## [Closures](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#//apple_ref/doc/uid/TP40014097-CH11-ID94)
 
+- Closure Expressions
+    - The Sorted Method
+    - Closure Expression Syntax
+    - Inferring Type From Context
+    - Implicit Returns from Single-Expression Closures
+    - Shorthand Argument Names
+    - Operator Methods
+- Trailing Closures
+- Capturing Values
+- Closures Are Reference Types
+- Escaping Closures
+- Autoclosures
+
+## [Enumerations](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-ID145)
+- Enumeration Syntax
+- Matching Enumeration Values with a Switch Statement
+- Associated Values
+- Raw Values
+    - Implicitly Assigned Raw Values
+    - Initializing from a Raw Value
+- Recursive Enumerations
+
+## [Classes and Structures](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#//apple_ref/doc/uid/TP40014097-CH13-ID82)
+- Comparing Classes and Structures
+    - Definition Syntax
+    - Class and Structure Instances
+    - Accessing Properties
+    - Memberwise Initializers for Structure Types
+- Structures and Enumerations Are Value Types
+- Classes Are Reference Types
+    - Identity Operators
+    - Pointers
+- Choosing Between Classes and Structures
+- Assignment and Copy Behavior for Strings, Arrays, and Dictionaries
+    
+
+
+## [Properties](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html#//apple_ref/doc/uid/TP40014097-CH14-ID254)
+- Stored Properties
+    - Stored Properties of Constant Structure Instances
+    - Lazy Stored Properties
+    - Stored Properties and Instance Variables
+- Computed Properties
+    - Shorthand Setter Declaration
+    - Read-Only Computed Properties
+- Property Observers
+- Global and Local Variables
+- Type Properties
+    - Type Property Syntax
+    - Querying and Setting Type Properties
+
+## [Methods](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID234)
+- Instance Methods
+    - The self Property
+    - Modifying Value Types from Within Instance Methods
+    - Assigning to self Within a Mutating Method
+- Type Methods
+
+
+## [Subscripts](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-ID305)
+- Subscript Syntax
+- Subscript Usage
+- Subscript Options
+
+
+## [Inheritance](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID193)
+- Defining a Base Class
+- Subclassing
+- Overriding
+    - Accessing Superclass Methods, Properties, and Subscripts
+    - Overriding Methods
+    - Overriding Properties
+        - Overriding Property Getters and Setters
+        - Overriding Property Observers
+    - Preventing Overrides
+
+## [Initialization](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)
+- Setting Initial Values for Stored Properties
+    - Initializers
+    - Default Property Values
+- Customizing Initialization
+    - Initialization Parameters
+    - Parameter Names and Argument Labels
+    - Initializer Parameters Without Argument Labels
+    - Optional Property Types
+    - Assigning Constant Properties During Initialization
+- Default Initializers
+    - Memberwise Initializers for Structure Types
+- Initializer Delegation for Value Types
+- Class Inheritance and Initialization
+    - Designated Initializers and Convenience Initializers
+    - Syntax for Designated and Convenience Initializers
+    - Initializer Delegation for Class Types
+    - Two-Phase Initialization
+    - Initializer Inheritance and Overriding
+    - Automatic Initializer Inheritance
+    - Designated and Convenience Initializers in Action
+- Failable Initializers
+    - What is Failable Initializers
+    - Failable Initializers for Enumerations
+    - Failable Initializers for Enumerations with Raw Values
+    - Propagation of Initialization Failure
+    - Overriding a Failable Initializer
+    - The init! Failable Initializer
+- Required Initializers
+- Setting a Default Property Value with a Closure or Function
+
+## [Deinitialization](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-ID142)
+- How Deinitialization Works
+- Deinitializers in Action
+
+## [Automatic Reference Counting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html#//apple_ref/doc/uid/TP40014097-CH20-ID48)
+- How ARC Works
+- ARC in Action
+- Strong Reference Cycles Between Class Instances
+- Resolving Strong Reference Cycles Between Class Instances
+    - Weak References
+    - Unowned References
+    - Unowned References and Implicitly Unwrapped Optional Properties
+- Strong Reference Cycles for Closures
+- Resolving Strong Reference Cycles for Closures
+    - Defining a Capture List
+    - Weak and Unowned References
+
+## [Optional Chaining](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/OptionalChaining.html#//apple_ref/doc/uid/TP40014097-CH21-ID245)
+- Optional Chaining as an Alternative to Forced Unwrapping
+- Defining Model Classes for Optional Chaining
+- Accessing Properties Through Optional Chaining
+- Calling Methods Through Optional Chaining
+- Accessing Subscripts Through Optional Chaining
+    - Accessing Subscripts of Optional Type
+- Linking Multiple Levels of Chaining
+- Chaining on Methods with Optional Return Values
+
+
+## [Error Handling](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ErrorHandling.html#//apple_ref/doc/uid/TP40014097-CH42-ID508)
+- Representing and Throwing Errors
+- Handling Errors
+    - Propagating Errors Using Throwing Functions
+    - Handling Errors Using Do-Catch
+    - Converting Errors to Optional Values
+    - Disabling Error Propagation
+    - Specifying Cleanup Actions
+
+
+## [Type Casting](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html#//apple_ref/doc/uid/TP40014097-CH22-ID338)
+- Defining a Class Hierarchy for Type Casting
+- Checking Type
+- Downcasting
+- Type Casting for Any and AnyObject
+
+
+## [Nested Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/NestedTypes.html#//apple_ref/doc/uid/TP40014097-CH23-ID242)
+- Nested Types in Action
+- Referring to Nested Types
+
+
+## [Extensions](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-ID151)
+- Extension Syntax
+- Computed Properties
+- Initializers
+- Methods
+    - Mutating Instance Methods
+- Subscripts
+- Nested Types
+
+
+## [Protocols](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-ID267)
+- Protocol Syntax
+- Property Requirements
+- Method Requirements
+- Mutating Method Requirements
+- Initializer Requirements
+    - Class Implementations of Protocol Initializer Requirements
+    - Failable Initializer Requirements
+- Protocols as Types
+- Delegation
+- Adding Protocol Conformance with an Extension
+    - Declaring Protocol Adoption with an Extension
+- Collections of Protocol Types
+- Protocol Inheritance
+- Class-Only Protocols
+- Protocol Composition
+- Checking for Protocol Conformance
+- Optional Protocol Requirements
+- Protocol Extensions
+    - Providing Default Implementations
+    - Adding Constraints to Protocol Extensions
+
+## [Generics](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html#//apple_ref/doc/uid/TP40014097-CH26-ID179)
+- The Problem That Generics Solve
+- Generic Functions
+- Type Parameters
+- Naming Type Parameters
+- Generic Types
+- Extending a Generic Type
+- Type Constraints
+    - Type Constraint Syntax
+    - Type Constraints in Action
+- Associated Types
+    - Associated Types in Action
+    - Extending an Existing Type to Specify an Associated Type
+- Generic Where Clauses
+- Extensions with a Generic Where Clause
+
+## [Access Control](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AccessControl.html#//apple_ref/doc/uid/TP40014097-CH41-ID3)
+- Modules and Source Files
+- Access Levels
+    - Guiding Principle of Access Levels
+    - Default Access Levels
+    - Access Levels for Single-Target Apps
+    - Access Levels for Frameworks
+    - Access Levels for Unit Test Targets
+- Access Control Syntax
+- Custom Types
+    - Tuple Types
+    - Function Types
+    - Enumeration Types
+        - Raw Values and Associated Values
+    - Nested Types
+- Subclassing
+- Constants, Variables, Properties, and Subscripts
+    - Getters and Setters
+- Initializers
+    - Default Initializers
+    - Default Memberwise Initializers for Structure Types
+- Protocols
+    - Protocol Inheritance
+    - Protocol Conformance
+- Extensions
+    - Adding Protocol Conformance with an Extension
+- Generics
+- Type Aliases
+
+
+## [Advanced Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#//apple_ref/doc/uid/TP40014097-CH27-ID28)
+- Bitwise Operators
+    - Bitwise NOT Operator
+    - Bitwise AND Operator
+    - Bitwise OR Operator
+    - Bitwise XOR Operator
+    - Bitwise Left and Right Shift Operators
+        - Shifting Behavior for Unsigned Integers
+        - Shifting Behavior for Signed Integers
+- Overflow Operators
+    - Value Overflow
+- Precedence and Associativity
+- Operator Methods
+    - Prefix and Postfix Operators
+    - Compound Assignment Operators
+    - Equivalence Operators
+- Custom Operators
+    - Precedence for Custom Infix Operators
