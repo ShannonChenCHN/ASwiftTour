@@ -389,6 +389,90 @@ For a complete list of the compound assignment operators provided by the Swift s
     - Availability condition: `if #available(platform name version, ..., *)`
 
 ## Functions
+
+- Defining and Calling Functions
+    ```
+    func greet(person: String) -> String {}
+    ```
+
+- Function Parameters and Return Values
+    - Functions Without Parameters
+    ```
+        func sayHelloWorld() -> String {}
+    ```
+    - Functions With Multiple Parameters
+    ```
+        func greet(person: String, alreadyGreeted: Bool) -> String {}
+    ```
+    - Functions Without Return Values
+    > Functions without a defined return type return a special value of type Void. This is simply an empty tuple, which is written as ().
+    - Functions with Multiple Return Values
+        - Use a **tuple** type as the return type
+        - Because the tuple’s member values are named as part of the function’s return type, they can be accessed with dot syntax.
+    - Optional Tuple Return Types
+        - Placing a question mark after the tuple type’s closing parenthesis, `(Int, Int)? `
+        - An optional tuple type such as (Int, Int)? is different from a tuple that contains optional types such as (Int?, Int?)
+
+- Function Argument Labels and Parameter Names
+    - General rules
+        - Each function parameter has both an argument label and a parameter name.
+        - The **argument label** is used when calling the function
+        - The **parameter name** is used in the implementation of the function
+        - By default, parameters use their parameter name as their argument label
+    - Specifying Argument Labels
+        ``` func greet(person: String, from hometown: String) -> String {}
+            print(greet(person: "Bill", from: "Cupertino"))
+        ```
+    - Omitting Argument Labels
+        ``` func someFunction(_ firstParameterName: Int, secondParameterName: Int) {}
+            someFunction(1, secondParameterName: 2)
+        ```
+    - Default Parameter Values
+        - Assigning a value to the parameter after that parameter’s type
+        - If a default value is defined, you can omit that parameter when calling the function.
+        ```
+        func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {}
+        someFunction(parameterWithoutDefault: 3, parameterWithDefault: 6)
+        someFunction(parameterWithoutDefault: 6)
+        ```
+
+    - Variadic Parameters
+        - A variadic parameter accepts zero or more values of a specified type
+        - Write variadic parameters by inserting three period characters (...) after the parameter’s type name
+        - The values passed to a variadic parameter are made available within the function’s body as an array of the appropriate type
+        - A function may have at most one variadic parameter
+    - In-Out Parameters
+        - Function parameters are constants by default
+        - If you want a function to modify a parameter’s value, and you want those changes to persist after the function call has ended, define that parameter as an in-out parameter instead
+        - You write an in-out parameter by placing the `inout` keyword right before a parameter’s type
+        - You can only pass a **variable** as the argument for an in-out parameter. You cannot pass a constant or a literal value as the argument
+        - You place an ampersand (&) directly before a variable’s name when you pass it as an argument to an in-out parameter
+        - In-out parameters cannot have default values, and variadic parameters cannot be marked as `inout`
+
+- Function Types
+    - General rules
+        - Every function has a specific function type, made up of the parameter types and the return type of the function
+        - The type of the function below is `() -> Void`
+        ```
+        func printHelloWorld() {
+            print("hello, world")
+        }
+        ```
+    - Using Function Types
+        - You use function types just like any other types in Swift.
+        ```
+            var mathFunction: (Int, Int) -> Int = addTwoInts
+        ```
+    - Function Types as Parameter Types
+        ``` func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) { } ```
+    - Function Types as Return Types
+        ```
+        func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+            return backward ? stepBackward : stepForward
+        }
+        ```
+- Nested Functions
+
 ## Closures
 ## Enumerations
 ## Classes and Structures

@@ -95,6 +95,8 @@ func someFunction(argumentLabel firstParameterName: Int, _ secondParameterName: 
     
 }
 
+someFunction(argumentLabel: 8, 8)
+
 // ======================= Default Parameter Values ==========================
 
 func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
