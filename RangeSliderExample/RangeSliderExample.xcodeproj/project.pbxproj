@@ -13,6 +13,8 @@
 		58F604731EB249ED00E81A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F604721EB249ED00E81A55 /* Assets.xcassets */; };
 		58F604761EB249ED00E81A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F604741EB249ED00E81A55 /* LaunchScreen.storyboard */; };
 		58F6047E1EB24B4C00E81A55 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6047D1EB24B4C00E81A55 /* RangeSlider.swift */; };
+		58F604801EB44C6A00E81A55 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6047F1EB44C6A00E81A55 /* RangeSliderThumbLayer.swift */; };
+		58F604821EB456D300E81A55 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F604811EB456D300E81A55 /* RangeSliderTrackLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		58F604751EB249ED00E81A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58F604771EB249ED00E81A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58F6047D1EB24B4C00E81A55 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		58F6047F1EB44C6A00E81A55 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
+		58F604811EB456D300E81A55 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				58F6046B1EB249ED00E81A55 /* AppDelegate.swift */,
 				58F6046D1EB249ED00E81A55 /* ViewController.swift */,
 				58F6047D1EB24B4C00E81A55 /* RangeSlider.swift */,
+				58F604811EB456D300E81A55 /* RangeSliderTrackLayer.swift */,
+				58F6047F1EB44C6A00E81A55 /* RangeSliderThumbLayer.swift */,
 				58F6046F1EB249ED00E81A55 /* Main.storyboard */,
 				58F604721EB249ED00E81A55 /* Assets.xcassets */,
 				58F604741EB249ED00E81A55 /* LaunchScreen.storyboard */,
@@ -141,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F6046E1EB249ED00E81A55 /* ViewController.swift in Sources */,
+				58F604821EB456D300E81A55 /* RangeSliderTrackLayer.swift in Sources */,
 				58F6047E1EB24B4C00E81A55 /* RangeSlider.swift in Sources */,
 				58F6046C1EB249ED00E81A55 /* AppDelegate.swift in Sources */,
+				58F604801EB44C6A00E81A55 /* RangeSliderThumbLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +314,7 @@
 				58F6047C1EB249ED00E81A55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
