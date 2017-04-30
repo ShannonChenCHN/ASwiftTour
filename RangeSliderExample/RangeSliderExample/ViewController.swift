@@ -84,6 +84,9 @@ class ViewController: UIViewController {
             self.rangeSlider.curvaceousness = 0.0
         }
         
+        // You could see that UISlider uses images to configure appearance from API and `View hierarchy debug tool`
+        let slider = UISlider.init(frame: CGRect.init(x: 30, y: 100, width: 300, height: 100))
+        view.addSubview(slider)
     }
     
     
