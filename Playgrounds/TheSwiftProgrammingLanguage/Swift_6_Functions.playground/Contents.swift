@@ -43,15 +43,15 @@ print(greet(person: "Tim", alreadyGreeted: true))
 
 // ============= Functions Without Return Values ===========
 
-func greet(person: String) {
+func greetWithoutReturnValues(person: String) {
     print("Hello, \(person)!")
 }
 
-greet(person: "Dave")
+greetWithoutReturnValues(person: "Dave")
 
 func printAndCount(string: String) -> Int {
     print(string)
-    return string.characters.count
+    return string.count
 }
 
 func printWithoutCounting(string: String) {
@@ -159,6 +159,7 @@ func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
 func printHelloWorld() {
     print("hello, world")
 }
+
 
 // ================================ Using Function Types ================================
 

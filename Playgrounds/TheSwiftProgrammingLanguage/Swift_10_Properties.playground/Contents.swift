@@ -7,8 +7,8 @@ import UIKit
 // ==================== Stored Properties ===========================
 
 struct FixedLengthRange {
-    var firstValue: Int
-    let length: Int
+    var firstValue: Int // variable property
+    let length: Int  // constant property
 }
 
 var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
@@ -16,8 +16,8 @@ rangeOfThreeItems.firstValue = 6
 //rangeOfThreeItems.length = 4  // this will report an error
 
 // Stored properties of constant structure instances
-let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
-//rangeOfFourItems.firstValue = 6  // this will report an error
+let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4) // this range represents integer values 0, 1, 2, and 3
+//rangeOfFourItems.firstValue = 6  // this will report an error, even though firstValue is a variable property, because structures are value types
 
 
 
@@ -35,7 +35,7 @@ class DataImporter {
 
 
 class DataManager {
-    lazy var imporer = DataImporter() // lazy cannot be used on a let
+    lazy var imporer = DataImporter() // note: lazy cannot be used on a let
     
     var data = [String]()
     // the DataManager class would provide data management functionality here
@@ -199,8 +199,8 @@ print(SomeClass.computedTypeProperty)
 
 
 struct AudioChannel {
-    static let thresholdLevel = 10 // Similar to `static Integer const thresholdLevel = 10`
-    static var maxInputLevelForAllChannels = 0// Similar to `static Integer thresholdLevel = 0`
+    static let thresholdLevel = 10 // Similar to `static Integer const thresholdLevel = 10` in Objective-C
+    static var maxInputLevelForAllChannels = 0// Similar to `static Integer thresholdLevel = 0` in Objective-C
 
     
     var currentLevel: Int = 0 {

@@ -41,7 +41,7 @@ struct Point {
 
     }
     /*
-     Structures and enumerations are value types. By default, the properties of a 【value type】 cannot be modified 【from within its instance methods】.
+     Structures and enumerations are value types. By default, the properties of a value type cannot be modified from within its instance methods.
      if you need to modify the properties of your structure or enumeration within a particular method, you can opt in to `mutating` behavior for that method.
      */
      mutating func moveBy(x deltaX: Double, y deltaY: Double) {
