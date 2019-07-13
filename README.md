@@ -1,13 +1,8 @@
 <img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="70" >
 
-# The Swift Programming Language(3.1) 学习笔记
+# The Swift Programming Language 
 
-# About
-A outline to sketch the content in *The Swift Programming Language(3.1)*.
-
-This list is intended for consolidating the content of *The Swift Programming Language(3.1)* and forming a sturctured understanding of Swift. 
-
-The Playgrounds related to the book is [here](https://github.com/ShannonChenCHN/ASwiftTour/tree/master/Playgrounds/TheSwiftProgrammingLanguage).
+> 相关资源的整理：[https://github.com/ShannonChenCHN/iOSDevLevelingUp/issues/14](https://github.com/ShannonChenCHN/iOSDevLevelingUp/issues/14)
 
 ## Contents
 - [The Basics](#the-basics)
