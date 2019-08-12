@@ -1,11 +1,28 @@
 # SwiftUI
 
 
-什么是 SwiftUI？
-SwiftUI 的特点，直观感受
-SwiftUI 设计的动机和目标（解决了什么问题）
-教程、资源
+### 什么是 SwiftUI？
 
+
+Better apps. Less code.
+
+- 跨 iOS 平台：iOS 所有平台通用的一套框架
+- 声明式语法：使用了基于 Swift 的声明式语法
+- 实时预览：画布和代码同步刷新
+
+
+### SwiftUI 的特点，直观感受
+
+
+### SwiftUI 设计的动机和目标（解决了什么问题）
+
+
+### SwiftUI 官方教程
+
+- SwiftUI Essentials
+- Drawing and Animation
+- App Design and Layout
+- Framework Integration
 
 
 ## 一些注意点：
@@ -41,6 +58,8 @@ https://onevcat.com/2019/06/swift-ui-firstlook/
 https://zhuanlan.zhihu.com/p/68275232
 https://mp.weixin.qq.com/s/ciiauLB__o-cXXfKn7lL1Q
 https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650402703&idx=1&sn=0942415a7c92ab2465a9acb58b15b808&chksm=83952797b4e2ae812bd6159b49c069104e8db54db40435cb3343e06ff96f043390d8057cd8d6&scene=21#wechat_redirect
+- [如何评价 SwiftUI？ - 知乎](https://www.zhihu.com/question/327763737)
+- [SwiftUI 的 DSL 语法分析](https://zhuanlan.zhihu.com/p/68294674)
 
 
 实践：
