@@ -14,6 +14,22 @@
 		5846C87D22DC64FB00C777D3 /* MethodSwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846C87C22DC64FB00C777D3 /* MethodSwizzling.swift */; };
 		5846C87F22DC709300C777D3 /* KVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846C87E22DC709300C777D3 /* KVC.swift */; };
 		5846C88122DC74CC00C777D3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846C88022DC74CC00C777D3 /* Dynamic.swift */; };
+		584C05BD23127AB10007BBA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05BC23127AB10007BBA6 /* main.swift */; };
+		584C05C223127AF10007BBA6 /* ProtocolSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05C123127AF10007BBA6 /* ProtocolSyntax.swift */; };
+		584C05C423127F820007BBA6 /* PropertyRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05C323127F820007BBA6 /* PropertyRequirements.swift */; };
+		584C05C6231287890007BBA6 /* MethodRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05C5231287890007BBA6 /* MethodRequirements.swift */; };
+		584C05C8231288AA0007BBA6 /* MutatingMethodRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05C7231288AA0007BBA6 /* MutatingMethodRequirements.swift */; };
+		584C05CA23128AE10007BBA6 /* InitializerRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05C923128AE10007BBA6 /* InitializerRequirements.swift */; };
+		584C05CC23128DEF0007BBA6 /* ProtocolsAsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05CB23128DEF0007BBA6 /* ProtocolsAsTypes.swift */; };
+		584C05CE23128F400007BBA6 /* Delegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05CD23128F400007BBA6 /* Delegation.swift */; };
+		584C05D0231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05CF231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift */; };
+		584C05D22312B24D0007BBA6 /* CollectionsOfProtocolTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05D12312B24D0007BBA6 /* CollectionsOfProtocolTypes.swift */; };
+		584C05D42312B2F90007BBA6 /* ProtocolInheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05D32312B2F90007BBA6 /* ProtocolInheritance.swift */; };
+		584C05D62312B3A50007BBA6 /* ClassOnlyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05D52312B3A50007BBA6 /* ClassOnlyProtocol.swift */; };
+		584C05D82312B45D0007BBA6 /* ProtocolComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05D72312B45D0007BBA6 /* ProtocolComposition.swift */; };
+		584C05DA2312B6540007BBA6 /* CheckingForProtocolConformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05D92312B6540007BBA6 /* CheckingForProtocolConformance.swift */; };
+		584C05DC2312B7980007BBA6 /* OptionalProtocolRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05DB2312B7980007BBA6 /* OptionalProtocolRequirements.swift */; };
+		584C05DE2312C2AA0007BBA6 /* ProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C05DD2312C2AA0007BBA6 /* ProtocolExtensions.swift */; };
 		585CADBF22D3931E00C6EFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADBE22D3931E00C6EFCD /* main.swift */; };
 		585CADC422D3934700C6EFCD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADC322D3934700C6EFCD /* DataManager.swift */; };
 		585CADC622D393C300C6EFCD /* StoredProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADC522D393C300C6EFCD /* StoredProperties.swift */; };
@@ -34,6 +50,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5846C87122DC5E9C00C777D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		584C05B823127AB10007BBA6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -71,6 +96,23 @@
 		5846C87C22DC64FB00C777D3 /* MethodSwizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSwizzling.swift; sourceTree = "<group>"; };
 		5846C87E22DC709300C777D3 /* KVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVC.swift; sourceTree = "<group>"; };
 		5846C88022DC74CC00C777D3 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		584C05BA23127AB10007BBA6 /* Protocols */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Protocols; sourceTree = BUILT_PRODUCTS_DIR; };
+		584C05BC23127AB10007BBA6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		584C05C123127AF10007BBA6 /* ProtocolSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolSyntax.swift; sourceTree = "<group>"; };
+		584C05C323127F820007BBA6 /* PropertyRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRequirements.swift; sourceTree = "<group>"; };
+		584C05C5231287890007BBA6 /* MethodRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodRequirements.swift; sourceTree = "<group>"; };
+		584C05C7231288AA0007BBA6 /* MutatingMethodRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutatingMethodRequirements.swift; sourceTree = "<group>"; };
+		584C05C923128AE10007BBA6 /* InitializerRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerRequirements.swift; sourceTree = "<group>"; };
+		584C05CB23128DEF0007BBA6 /* ProtocolsAsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAsTypes.swift; sourceTree = "<group>"; };
+		584C05CD23128F400007BBA6 /* Delegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegation.swift; sourceTree = "<group>"; };
+		584C05CF231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingProtocolConformanceWithAnExtension.swift; sourceTree = "<group>"; };
+		584C05D12312B24D0007BBA6 /* CollectionsOfProtocolTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsOfProtocolTypes.swift; sourceTree = "<group>"; };
+		584C05D32312B2F90007BBA6 /* ProtocolInheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolInheritance.swift; sourceTree = "<group>"; };
+		584C05D52312B3A50007BBA6 /* ClassOnlyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOnlyProtocol.swift; sourceTree = "<group>"; };
+		584C05D72312B45D0007BBA6 /* ProtocolComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolComposition.swift; sourceTree = "<group>"; };
+		584C05D92312B6540007BBA6 /* CheckingForProtocolConformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingForProtocolConformance.swift; sourceTree = "<group>"; };
+		584C05DB2312B7980007BBA6 /* OptionalProtocolRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocolRequirements.swift; sourceTree = "<group>"; };
+		584C05DD2312C2AA0007BBA6 /* ProtocolExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExtensions.swift; sourceTree = "<group>"; };
 		585CADBC22D3931E00C6EFCD /* Properties */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Properties; sourceTree = BUILT_PRODUCTS_DIR; };
 		585CADBE22D3931E00C6EFCD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		585CADC322D3934700C6EFCD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -93,6 +135,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5846C87022DC5E9C00C777D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584C05B723127AB10007BBA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,12 +177,36 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
+		584C05BB23127AB10007BBA6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				584C05BC23127AB10007BBA6 /* main.swift */,
+				584C05C123127AF10007BBA6 /* ProtocolSyntax.swift */,
+				584C05C323127F820007BBA6 /* PropertyRequirements.swift */,
+				584C05C5231287890007BBA6 /* MethodRequirements.swift */,
+				584C05C7231288AA0007BBA6 /* MutatingMethodRequirements.swift */,
+				584C05C923128AE10007BBA6 /* InitializerRequirements.swift */,
+				584C05CB23128DEF0007BBA6 /* ProtocolsAsTypes.swift */,
+				584C05CD23128F400007BBA6 /* Delegation.swift */,
+				584C05CF231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift */,
+				584C05D12312B24D0007BBA6 /* CollectionsOfProtocolTypes.swift */,
+				584C05D32312B2F90007BBA6 /* ProtocolInheritance.swift */,
+				584C05D52312B3A50007BBA6 /* ClassOnlyProtocol.swift */,
+				584C05D72312B45D0007BBA6 /* ProtocolComposition.swift */,
+				584C05D92312B6540007BBA6 /* CheckingForProtocolConformance.swift */,
+				584C05DB2312B7980007BBA6 /* OptionalProtocolRequirements.swift */,
+				584C05DD2312C2AA0007BBA6 /* ProtocolExtensions.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		585CADA522D392CE00C6EFCD = {
 			isa = PBXGroup;
 			children = (
 				585CADBD22D3931E00C6EFCD /* Properties */,
 				585CADDA22D5DBF300C6EFCD /* Methods */,
 				5846C87422DC5E9C00C777D3 /* Runtime */,
+				584C05BB23127AB10007BBA6 /* Protocols */,
 				585CADAF22D392CE00C6EFCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +217,7 @@
 				585CADBC22D3931E00C6EFCD /* Properties */,
 				585CADD922D5DBF300C6EFCD /* Methods */,
 				5846C87322DC5E9C00C777D3 /* Runtime */,
+				584C05BA23127AB10007BBA6 /* Protocols */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +274,23 @@
 			productReference = 5846C87322DC5E9C00C777D3 /* Runtime */;
 			productType = "com.apple.product-type.tool";
 		};
+		584C05B923127AB10007BBA6 /* Protocols */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584C05C023127AB10007BBA6 /* Build configuration list for PBXNativeTarget "Protocols" */;
+			buildPhases = (
+				584C05B623127AB10007BBA6 /* Sources */,
+				584C05B723127AB10007BBA6 /* Frameworks */,
+				584C05B823127AB10007BBA6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Protocols;
+			productName = Protocols;
+			productReference = 584C05BA23127AB10007BBA6 /* Protocols */;
+			productType = "com.apple.product-type.tool";
+		};
 		585CADBB22D3931E00C6EFCD /* Properties */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 585CADC022D3931E00C6EFCD /* Build configuration list for PBXNativeTarget "Properties" */;
@@ -240,12 +331,15 @@
 		585CADA622D392CE00C6EFCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = ShannonChen;
 				TargetAttributes = {
 					5846C87222DC5E9C00C777D3 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					584C05B923127AB10007BBA6 = {
+						CreatedOnToolsVersion = 11.0;
 					};
 					585CADBB22D3931E00C6EFCD = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -270,6 +364,7 @@
 				585CADBB22D3931E00C6EFCD /* Properties */,
 				585CADD822D5DBF300C6EFCD /* Methods */,
 				5846C87222DC5E9C00C777D3 /* Runtime */,
+				584C05B923127AB10007BBA6 /* Protocols */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +379,29 @@
 				5846C87B22DC5EA700C777D3 /* AssociatedObjects.swift in Sources */,
 				5846C87622DC5E9C00C777D3 /* main.swift in Sources */,
 				5846C87D22DC64FB00C777D3 /* MethodSwizzling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584C05B623127AB10007BBA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584C05C6231287890007BBA6 /* MethodRequirements.swift in Sources */,
+				584C05DA2312B6540007BBA6 /* CheckingForProtocolConformance.swift in Sources */,
+				584C05D0231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift in Sources */,
+				584C05C423127F820007BBA6 /* PropertyRequirements.swift in Sources */,
+				584C05DC2312B7980007BBA6 /* OptionalProtocolRequirements.swift in Sources */,
+				584C05DE2312C2AA0007BBA6 /* ProtocolExtensions.swift in Sources */,
+				584C05C223127AF10007BBA6 /* ProtocolSyntax.swift in Sources */,
+				584C05D22312B24D0007BBA6 /* CollectionsOfProtocolTypes.swift in Sources */,
+				584C05CC23128DEF0007BBA6 /* ProtocolsAsTypes.swift in Sources */,
+				584C05BD23127AB10007BBA6 /* main.swift in Sources */,
+				584C05CA23128AE10007BBA6 /* InitializerRequirements.swift in Sources */,
+				584C05D82312B45D0007BBA6 /* ProtocolComposition.swift in Sources */,
+				584C05D62312B3A50007BBA6 /* ClassOnlyProtocol.swift in Sources */,
+				584C05C8231288AA0007BBA6 /* MutatingMethodRequirements.swift in Sources */,
+				584C05D42312B2F90007BBA6 /* ProtocolInheritance.swift in Sources */,
+				584C05CE23128F400007BBA6 /* Delegation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +455,28 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L32PN8QKLZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		584C05BE23127AB10007BBA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L32PN8QKLZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		584C05BF23127AB10007BBA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L32PN8QKLZ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -505,6 +645,15 @@
 			buildConfigurations = (
 				5846C87822DC5E9C00C777D3 /* Debug */,
 				5846C87922DC5E9C00C777D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		584C05C023127AB10007BBA6 /* Build configuration list for PBXNativeTarget "Protocols" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584C05BE23127AB10007BBA6 /* Debug */,
+				584C05BF23127AB10007BBA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
