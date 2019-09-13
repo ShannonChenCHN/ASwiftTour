@@ -25,3 +25,4 @@ import Foundation
 //runExample15()
 //runExample16()
 //runExample17()
+runExample18()

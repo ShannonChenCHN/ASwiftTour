@@ -25,6 +25,7 @@ func runExample16() {
 //------------------- Providing default implementations -------------------
 
 extension PrettyTextRepresentable {
+//    var palaceholder = "xxx" // !! Extensions must not contain stored properties
     var prettyTextualDescription: String {
         return textualDescription
     }

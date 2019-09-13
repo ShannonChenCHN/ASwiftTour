@@ -46,6 +46,7 @@
 		585CADE522D623AB00C6EFCD /* InstanceMethodsOfEnumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADE422D623AB00C6EFCD /* InstanceMethodsOfEnumerations.swift */; };
 		585CADE722D6263300C6EFCD /* TypeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADE622D6263300C6EFCD /* TypeMethods.swift */; };
 		585CADE922D6285400C6EFCD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585CADE822D6285400C6EFCD /* Player.swift */; };
+		5880A721231BBF9B00EFE561 /* MethodDynamicDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5880A720231BBF9B00EFE561 /* MethodDynamicDispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +132,7 @@
 		585CADE422D623AB00C6EFCD /* InstanceMethodsOfEnumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceMethodsOfEnumerations.swift; sourceTree = "<group>"; };
 		585CADE622D6263300C6EFCD /* TypeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMethods.swift; sourceTree = "<group>"; };
 		585CADE822D6285400C6EFCD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5880A720231BBF9B00EFE561 /* MethodDynamicDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDynamicDispatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				584C05D92312B6540007BBA6 /* CheckingForProtocolConformance.swift */,
 				584C05DB2312B7980007BBA6 /* OptionalProtocolRequirements.swift */,
 				584C05DD2312C2AA0007BBA6 /* ProtocolExtensions.swift */,
+				5880A720231BBF9B00EFE561 /* MethodDynamicDispatch.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			files = (
 				584C05C6231287890007BBA6 /* MethodRequirements.swift in Sources */,
 				584C05DA2312B6540007BBA6 /* CheckingForProtocolConformance.swift in Sources */,
+				5880A721231BBF9B00EFE561 /* MethodDynamicDispatch.swift in Sources */,
 				584C05D0231291690007BBA6 /* AddingProtocolConformanceWithAnExtension.swift in Sources */,
 				584C05C423127F820007BBA6 /* PropertyRequirements.swift in Sources */,
 				584C05DC2312B7980007BBA6 /* OptionalProtocolRequirements.swift in Sources */,

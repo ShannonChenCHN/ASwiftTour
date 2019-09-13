@@ -44,7 +44,7 @@ VStack 和 HStack
 https://developer.apple.com/xcode/swiftui/
 https://developer.apple.com/documentation/swiftui/
 https://developer.apple.com/tutorials/swiftui/tutorials
-WWDC 2019
+
 
 
 教程：

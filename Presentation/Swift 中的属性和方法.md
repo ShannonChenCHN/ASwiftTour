@@ -107,5 +107,7 @@ https://academy.realm.io/cn/posts/mobilization-roy-marmelstein-objective-c-runti
 https://nshipster.com/swift-objc-runtime/
 
 https://nshipster.com/swift-property-observers/
+- [Swift5.0的Runtime机制浅析](https://mp.weixin.qq.com/s/qPlg716RqtiT2PK_WqtBZQ)
+- [Swift 5 之后 "Method Swizzling"？](https://mp.weixin.qq.com/s/VX7_Iqq9eAM73pIjtUVC5Q)
 
 
