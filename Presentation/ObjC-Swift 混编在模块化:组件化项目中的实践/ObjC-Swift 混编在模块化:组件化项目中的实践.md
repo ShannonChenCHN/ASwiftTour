@@ -1,30 +1,25 @@
-# Swift-ObjC 混编实战
+# ObjC-Swift 混编在模块化/组件化项目中的实践
 
-**关键词**：模块化/组件化、ObjC/Swift 混编、Swift 静态库、ABI Stability、LLVM Module、Umbrella header
+**关键词**：模块化/组件化、ObjC-Swift 混编、Swift 静态库、ABI Stability、Module Stability、LLVM Module、Umbrella Header
 
-## 大纲
+## 目录
 - 基础准备工作
-  - 调研业界的实践经验
-  - 现状
-  - OC -> Swift 迁移指南
-  - Swift API Design Guidelines
-- 几个问题
+  - 在一个 App Target 内部混编
+  - 在一个 Framework Target 中混编
+- 踩坑之旅
+  - 项目背景
+  - 静态库子工程的集成
   - 静态链接问题
   - 动态链接问题
   - ABI Stability 和`Always Embed Swift Standard Library` 选项
-  - Swift 和 ObjC 混编
-    - OC -> Swift 迁移指南
-    - 模块划分，模块之间的依赖问题
-    - 调试问题
-  - MCD 上 CTHotel 模块编译出错的问题：“找不到 `<CTHotelFramework/CTHotelFramework-Swift.h>`”
-- Swift 模块之间的调用
-  - 单独编译某个 Swift 编写的模块时报错
-    - Swift 为什么没有头文件？
-    - `xxx.swiftmodule` 文件和 `Import Path` 设置选项
-    - `xx.swiftinterface` 文件
-    - 设置子工程依赖（最终方案）
-  - Swift 之间模块调用时重复导入 ObjC 头文件的问题
-  - 单元测试模块中引用 Swift 模块时，但是没有自动补全和代码高亮
+  - 当模块化/组件化项目遇到 Swift 静态库
+    - ObjC 模块调用 Swift 模块
+    - Swift 模块调用 Swift 模块
+    - Module Stability
+    - Swift 模块调用 ObjC 模块
+    - LLVM Module 和 Umbrella Header
+  - 调试问题
+- 总结
 
 
 ## 一、基础准备工作
@@ -72,10 +67,6 @@
 
 如果要想在 ObjC 调用 Swift，同样也要将 Build Settings 中的 Defines Module 选项设置为 `YES`，然后在要引用 Swift 代码的 ObjC 文件中导入编译器生成的头文件 `#import <ProductName/ProductModuleName-Swift.h>`。
 
-#### 3. 跨模块调用（组件化）
-
-目前业界普遍的做法是基于 CocoaPods 实现的。
-
 #### 参考
 - https://developer.apple.com/documentation/swift#2984801
 
@@ -100,6 +91,7 @@
 目前携程的项目整体架构是采用模块化设计的，而且整个项目完全都是使用 ObjC/C 实现的，在实际开发时，各模块既可以以源码的形式使用，也可以以`.a + .h + 资源 bundle` 的形式使用，简而言之，既可以源码依赖，也可以是静态库依赖。那么我们可以直接在项目中使用 Swift 静态库吗？
 
 ![](./images/project_structure.png)
+
 图 5 项目结构示意图（简化模型）
 
 我们都知道，从 Xcode 9 开始，Apple 就开始支持 Swift 静态库的使用了，所以我们现有的项目架构并不需要调整，引入 Swift 代码的话是可以以静态库的形式出现的。
@@ -119,7 +111,6 @@
   - 添加构建依赖：在 Build Phases 面板的 `Dependencies` 中添加这个静态库的 target 为构建依赖
   - 添加要链接的静态库：在 Build Phases 面板的 `Link Binary With Libraries` 中链接这个 Swift 静态库 
   - 导出 `xxx-Swift` 头文件：在 Swift 静态库工程的 `Run Script Phase` 中添加脚本，将编译器生成的 `SwiftLibA-Swift` 头文件复制到 build 目录下（如图 6 所示）
-  - modulemap ？??
 - 在 ObjC 代码中调用 Swift API
   - 在 Swift 代码中添加 `@objc`、`public` 等关键字
   - 在 ObjC 代码中添加 `#import <SwiftLibA/SwiftLibA-Swift.h>`（这里的 SwiftLibA 是新添加的静态库的名字）
@@ -273,7 +264,7 @@ app 在启动/运行时，会先看 app bundle 中有没有 Swift runtime，如�
 - https://developer.apple.com/documentation/xcode_release_notes/xcode_10_2_release_notes/swift_5_release_notes_for_xcode_10_2
 
 
-### 6. 当模块化项目遇到 Swift 静态库
+### 6. 模块化/组件化
 
 前面提到过，携程 iOS 项目是采用的是模块化架构，而模块之间是有依赖关系的。一般是上层模块依赖于下层的模块，如图 4 所示。
 
@@ -301,7 +292,7 @@ app 在启动/运行时，会先看 app bundle 中有没有 Swift runtime，如�
 这样的确没问题，但是考虑到持续持续交付平台上各个模块都是独立编译的情况，像上面的这个例子中，如果单独编译模块 ObjCLibA 的话，就会出现头文件找不到的错误： `'SwiftLibA/SwiftLibA-Swift.h' file not found`。
 
 ![](./images/objc_call_swift.png)
-图 14 模块 ObjCLibA 调用模块 SwiftLibA，(a)编译主工程没问题，(b)但是单独编译模块 ObjCLibA 就报错了
+图 15 模块 ObjCLibA 调用模块 SwiftLibA，(a)编译主工程没问题，(b)但是单独编译模块 ObjCLibA 就报错了
 
 
 这是因为 SwiftLibA-Swift.h 文件是编译模块 SwiftLibA 时的产物，是生成在 build 目录中，而不是工程代码所在的目录中。这一点我们在前面已经讨论过，这里不再赘述。
@@ -355,7 +346,7 @@ fi
 ```
 
 ![](./images/copy_generated_header.png)
-图 15 将编译器生成的头文件拷贝到源代码目录
+图 16 将编译器生成的头文件拷贝到源代码目录
 
 **参考：**
 
@@ -394,14 +385,14 @@ public class SwiftLibA: NSObject {
 这个时候如果编译主工程是没问题的，但是如果单独编译模块 SwiftLibA 就会报错：`No such module 'SwiftLibB'`。
 
 ![](./images/swift_call_swift.png)
-图 16 模块 SwiftLibA 调用模块 SwiftLibB，(a)编译主工程没问题，(b)但是单独编译模块 SwiftLibA 就报错了
+图 17 模块 SwiftLibA 调用模块 SwiftLibB，(a)编译主工程没问题，(b)但是单独编译模块 SwiftLibA 就报错了
 
 这个问题看上去跟前面遇到的 ObjC 模块调用 Swift 模块的问题是一样的，但是我们要知道 Swift 中是没有头文件的概念的，那么 Swift 是通过什么方式暴露公开 API 的呢？
 
 不同于 C-based 语言使用 manually-written 头文件来提供公开接口，Swift 是通过一个叫做 `swiftmodule` 的文件来描述一个 library 的 interface，这个 `swiftmodule` 文件是编译器自动生成的。我们打开 SwiftLibB 模块的 build 目录，可以看到编译器自动生成的 `SwiftLibB.swiftmodule`，这个 `SwiftLibB.swiftmodule` 目录下有两种文件：`swiftmodule` 文件和 `swiftdoc` 文件。`swiftmodule` 文件和 `swiftdoc` 文件都是二进制文件，我们可以用反编译工具查看其中的内容，`swiftmodule` 文件里面保存了模块的信息，而 `swiftdoc` 文件则保存了源代码中的注释内容。
 
 ![](./images/swiftmodule_dir.png)
-图 17 build 目录下的 swiftmodule 文件
+图 18 build 目录下的 swiftmodule 文件
 
 看到这里，你可能会想我们只要像导出 `xxx-Swift.h` 文件一样，把这几个 `swiftmodule` 文件导出到源代码目录，然后再设置 SwiftLibA 的 `import path`，另外再把这几个文件加入 git 版本控制中就解决了。
 
@@ -420,17 +411,17 @@ Module compiled with Swift 5.1 cannot be imported by the Swift 5.1.2 compiler
 ABI Stability 解决的是不同 Swift 版本的代码在**运行时**的兼容性问题，而 Module Stability 则要解决的是不同 Swift 版本的代码在**编译时**的兼容性问题。具体介绍可以看一下 Swift 官方博客 [ABI Stability and More](https://swift.org/blog/abi-stability-and-more/) 和 WWDC 2019 的视频 [Binary Frameworks in Swift](https://developer.apple.com/videos/play/wwdc2019/416/)，以及社区的讨论 [Plan for module stability](https://forums.swift.org/t/plan-for-module-stability/14551)、[Update on Module Stability and Module Interface Files](https://forums.swift.org/t/update-on-module-stability-and-module-interface-files/23337)。
 
 ![](./images/module_stability.png)
-图 18 swift.org 官方博客上关于 Module Stability 的介绍
+图 19 swift.org 官方博客上关于 Module Stability 的介绍
 
 针对 Module Stability，Apple 提供的解决方案是 `swiftinterface` 文件，`swiftinterface` 文件是作为 `swiftmodule` 的一个补充，它是一个描述 module 公开接口的文本文件，不受编译器版本限制。比如，你用 Swift 5.0 的编译器编译出了一个 library，它的 `swiftinterface` 文件可以在 Swift 5.1 的编译器上使用。
 
 我们现在打开 SwiftLibB 的 `Build Setting`，找到 `Build Options -> Build Libraries for Distribution`，把它设置为 `YES`，重新编译一下，再看看 build 目录中生成的 `SwiftLibB.swiftmodule`，里面多了几个 `swiftinterface` 文件。
 
 ![](./images/build_libraries_for_distribution.png)
-图 19 `Build Libraries for Distribution` 选项
+图 20 `Build Libraries for Distribution` 选项
 
 ![](./images/swiftinterface_file.png)
-图 20 编译器自动生成的 `swiftinterface` 文件
+图 21 编译器自动生成的 `swiftinterface` 文件
 
 我们可以打开 `swiftinterface` 文件跟源代码对一下，它其实就是一个 swift 头文件。
 
@@ -468,7 +459,7 @@ import Swift
 为了能够满足模块 SwiftLibA 的单独编译，跟前面对 `xx-Swift.h` 文件的操作一样，我们用脚本把 `SwiftLibB.swiftmodule` 拷贝到源代码目录中，然后再把这个新路径添加到 SwiftLibA 的 `Build Setting -> Swift Compiler-Search Paths -> Import Paths` 中。
 
 ![](./images/import_paths.png)
-图 21 添加 swiftmodule 文件的路径到 SwiftLibA 的 import paths
+图 22 添加 swiftmodule 文件的路径到 SwiftLibA 的 import paths
 
 这个方案对于模块化/组件化有个缺点就是，每次编译 Swift 模块时需要考虑多种不同的 CPU 架构。
 
@@ -495,6 +486,8 @@ import Swift
 
 根据 Apple 官方文档中的介绍，在 Library 或者 Framework 中不能使用 bridging header 的，而应该使用 umbrella header。
 
+#### LLVM Module 和 Umbrella Header
+
 什么是 umbrella header？这就涉及到了 LLVM Module 的概念，LLVM 引入 Module 是为了解决传统的 `#include` 和 `#import` 这些头文件导入机制所存在的问题，也就是说这是一种新的头文件管理机制，[LLVM 官方文档](https://clang.llvm.org/docs/Modules.html#problems-with-the-current-model)中对此有详细的介绍。
 
 在 ObjC 中可以通过 `@import` 指令导入 module，在 Swift 中通过 `import` 关键字导入 module。
@@ -512,6 +505,7 @@ Module 机制中一个很重要的文件就是 module map 文件，module map �
 一个 C 标准库的 module map 文件可能就是这样的：
 
 ```
+module std [system] [extern_c] {
   module assert {
     textual header "assert.h"
     header "bits/assert-decls.h"
@@ -547,23 +541,25 @@ modulemap 中的内容是使用 module map 语言来实现的，module map 语�
 
 > A header with the `umbrella` specifier is called an umbrella header. An umbrella header includes all of the headers within its directory (and any subdirectories), and is typically used (in the `#include` world) to easily access the full API provided by a particular library. With modules, an umbrella header is a convenient shortcut that eliminates the need to write out `header` declarations for every library header. A given directory can only contain a single umbrella header.
 
+如果你创建的是 Framework，在创建这个 Framework 时，`defines module` 默认会设置为 `YES`，编译这个 Framework 之后，可以在 build 目录下看到自动生成的 `Module` 目录，这个 `Module` 目录下有自动创建的 `modulemap` 文件，其中引用了自动创建的 umbrella header。但是如果你创建的是 static library，那就需要开发者手动为这个 module 创建 `modulemap` 文件和要引用的 umbrella header。
+
 接下来我们创建一个 ObjCLibB 模块，然后让 SwiftLibA 模块来调用它。
 
 首先要做的是给模块 ObjCLibB 新建一个 umbrella header 文件和一个 `modulemap` 文件，然后再把 modulemap 文件的路径添加到 SwiftLibA 的 import paths，把 umbrella header 文件的路径添加到 SwiftLibA 的 header search paths，这样就大功告成了。
 
 ![](./images/umbrella_header.png)
-图 22 新建 umbrella header 文件
+图 23 新建 umbrella header 文件
 
 ![](./images/modulemap.png)
-图 23 新建 modulemap 文件
+图 24 新建 modulemap 文件
 
 ![](./images/adding_modulemap_to_import_paths.png)
-图 24 添加 modulemap 文件的路径到 SwiftLibA 的 import paths
+图 25 添加 modulemap 文件的路径到 SwiftLibA 的 import paths
 
 ![](./images/adding_umbrella_header_to_import_paths.png)
-图 25 添加 umbrella header 文件的路径到 SwiftLibA 的 header search paths
+图 26 添加 umbrella header 文件的路径到 SwiftLibA 的 header search paths
 
-如果你的 Swift 模块要调用的模块是 Swift-ObjC 混编的，也可用同样的方式来实现，核心点就在于将 C-based 语言的头文件用 modulemap 和 umbrella header 封装起来。
+如果你的 Swift 模块要调用的模块是 ObjC-Swift 混编的，也可用同样的方式来实现，核心点就在于将 C-based 语言的头文件用 modulemap 和 umbrella header 封装起来。
 
 **参考：**
 
@@ -579,23 +575,18 @@ modulemap 中的内容是使用 module map 语言来实现的，module map 语�
 如果你的主工程是纯 ObjC 实现的，那么当你在断点调试 Swift 模块中的代码时，会无法看到变量值，即便在 console 上使用 LLDB 命令也打印不出来。
 
 ```
-$ po itemId
-Cannot create Swift scratch context (couldn't load the Swift stdlib).Shared Swift state for CTRIP_WIRELESS could not be initialized. The REPL and expressions are unavailable.
+(lldb) po name
+Cannot create Swift scratch context (couldn't load the Swift stdlib)Cannot create Swift scratch context (couldn't load the Swift stdlib)Shared Swift state for MainProject could not be initialized.
+The REPL and expressions are unavailable.
+
 ```
 ![](./images/debugging_variables.png)
-图 26 调试 Swift 代码时无法看到变量值
+图 27 调试 Swift 代码时无法看到变量值
 
-这是因为主工程中没有 Swift 代码，所以就没有 Swift 相关的设置选项，即便在 Debug 模式下编译器也会默认对 Swift 代码进行优化，从而导致调试时看不到调试信息。解决办法就是在主工程中创建一个新的 Swift 文件。
+这是因为主工程中没有 Swift 代码，所以就没有 Swift 相关的环境和设置选项，解决办法就是在主工程中创建一个新的 Swift 文件。
 
-![](./images/optimization_level.png)
-图 27 将 Optimization level 设置为 `None`
-
-
-**参考：**
-
-- https://developer.apple.com/library/archive/qa/qa1947/_index.html 
-- https://stackoverflow.com/questions/3221504/xcode-debugger-sometimes-doesnt-display-variable-values
 
 
 ## 三、总结
 
+Swift 5 的到来终于让我们看到了期待已久的 ABI 稳定，相信更现代、更安全的 Swift 会变得越来越流行。另外，在模块化/组件化项目中落地 Swift 时，LLVM Module 是一个绕不过去的话题，LLVM Module 改变了传统 C-Based 语言的头文件机制，取而代之的是 Module 的思维。技术的发展会带来更先进的生产力，我们期待 Swift 在未来能够进一步提升我们的开发效率和编程体验。
