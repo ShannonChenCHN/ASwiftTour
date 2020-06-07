@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58EA521A242F816500929CDC /* SwiftLibB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EA5219242F816500929CDC /* SwiftLibB.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58EA5214242F816500929CDC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		58EA5216242F816500929CDC /* libSwiftLibB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftLibB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		58EA5219242F816500929CDC /* SwiftLibB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLibB.swift; sourceTree = "<group>"; };
+		58EA5291242F9DA600929CDC /* SwiftLibB-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLibB-Swift.h"; sourceTree = "<group>"; };
+		58EA52B22430C97300929CDC /* x86_64-apple-ios-simulator.swiftinterface */ = {isa = PBXFileReference; lastKnownFileType = text; path = "x86_64-apple-ios-simulator.swiftinterface"; sourceTree = "<group>"; };
+		58EA52B32430C97300929CDC /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
+		58EA52B42430C97300929CDC /* x86_64-apple-ios-simulator.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftmodule"; sourceTree = "<group>"; };
+		58EA52B52430C97300929CDC /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
+		58EA52B62430C97300929CDC /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
+		58EA52B72430C97300929CDC /* x86_64.swiftinterface */ = {isa = PBXFileReference; lastKnownFileType = text; path = x86_64.swiftinterface; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58EA5213242F816500929CDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58EA520D242F816500929CDC = {
+			isa = PBXGroup;
+			children = (
+				58EA5291242F9DA600929CDC /* SwiftLibB-Swift.h */,
+				58EA52B12430C97300929CDC /* SwiftLibB.swiftmodule */,
+				58EA5218242F816500929CDC /* SwiftLibB */,
+				58EA5217242F816500929CDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58EA5217242F816500929CDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58EA5216242F816500929CDC /* libSwiftLibB.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58EA5218242F816500929CDC /* SwiftLibB */ = {
+			isa = PBXGroup;
+			children = (
+				58EA5219242F816500929CDC /* SwiftLibB.swift */,
+			);
+			path = SwiftLibB;
+			sourceTree = "<group>";
+		};
+		58EA52B12430C97300929CDC /* SwiftLibB.swiftmodule */ = {
+			isa = PBXGroup;
+			children = (
+				58EA52B22430C97300929CDC /* x86_64-apple-ios-simulator.swiftinterface */,
+				58EA52B32430C97300929CDC /* x86_64-apple-ios-simulator.swiftdoc */,
+				58EA52B42430C97300929CDC /* x86_64-apple-ios-simulator.swiftmodule */,
+				58EA52B52430C97300929CDC /* x86_64.swiftdoc */,
+				58EA52B62430C97300929CDC /* x86_64.swiftmodule */,
+				58EA52B72430C97300929CDC /* x86_64.swiftinterface */,
+			);
+			path = SwiftLibB.swiftmodule;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58EA5215242F816500929CDC /* SwiftLibB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58EA521D242F816500929CDC /* Build configuration list for PBXNativeTarget "SwiftLibB" */;
+			buildPhases = (
+				58EA5212242F816500929CDC /* Sources */,
+				58EA5213242F816500929CDC /* Frameworks */,
+				58EA5214242F816500929CDC /* CopyFiles */,
+				58EA5220242F81A800929CDC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLibB;
+			productName = SwiftLibB;
+			productReference = 58EA5216242F816500929CDC /* libSwiftLibB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58EA520E242F816500929CDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = ShannonChen;
+				TargetAttributes = {
+					58EA5215242F816500929CDC = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 58EA5211242F816500929CDC /* Build configuration list for PBXProject "SwiftLibB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58EA520D242F816500929CDC;
+			productRefGroup = 58EA5217242F816500929CDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58EA5215242F816500929CDC /* SwiftLibB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58EA5220242F81A800929CDC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n\ngenerated_header_file=${DERIVED_SOURCES_DIR}/*-Swift.h\ninclude_dir=${BUILT_PRODUCTS_DIR}/include/${PRODUCT_MODULE_NAME}/\n\n# 将编译器生成的 xxx-Swift 头文件拷贝到 build 目录下的 include 目录中\nmkdir -p ${include_dir}\ncp ${generated_header_file} ${include_dir}\n\n# 去掉 xxx-Swift.h 文件头部注释中的编译器的版本号\nsed -i \"\" \"s/^\\/\\/ Generated by Apple.*$/\\/\\/ Generated by Apple/g\" ${generated_header_file}\n\n# 拷贝 xxx-Swift.h 文件到工程源码目录 \nheader_file_in_proj=${SRCROOT}/${PROJECT}-Swift.h\nneeds_copy=true\nif [ -f \"$header_file_in_proj\" ]; then\n    echo \"${header_file_in_proj} 已存在\"\n    \n    new_content=$(cat ${generated_header_file})\n    old_content=$(cat ${header_file_in_proj})\n    if [ \"$new_content\" = \"$old_content\" ];then\n        echo \"文件内容一致，无需再Copy：\"\n        echo \"${generated_header_file} \"\n        echo \"${header_file_in_proj} \"\n\n        needs_copy=false\n    fi\nfi\n\nif [ \"$needs_copy\" = true ] ; then\n    \n    echo \"文件内容不一致，需要Copy：\"\n    echo \"复制文件： \"\n    echo \"${generated_header_file} \"\n    echo \"${header_file_in_proj} \"\n\n    cp ${generated_header_file} ${header_file_in_proj}\nfi\n\n\nswiftmodule_in_proj=${SRCROOT}/${PRODUCT_MODULE_NAME}.swiftmodule/\nmkdir -p ${swiftmodule_in_proj}\ncp -rf ${BUILT_PRODUCTS_DIR}/*.swiftmodule/* ${swiftmodule_in_proj}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58EA5212242F816500929CDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58EA521A242F816500929CDC /* SwiftLibB.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58EA521B242F816500929CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58EA521C242F816500929CDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58EA521E242F816500929CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = L32PN8QKLZ;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../ObjCLibB/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../ObjCLibB/module.modulemap";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58EA521F242F816500929CDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = L32PN8QKLZ;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../ObjCLibB/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../ObjCLibB/module.modulemap";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58EA5211242F816500929CDC /* Build configuration list for PBXProject "SwiftLibB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58EA521B242F816500929CDC /* Debug */,
+				58EA521C242F816500929CDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58EA521D242F816500929CDC /* Build configuration list for PBXNativeTarget "SwiftLibB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58EA521E242F816500929CDC /* Debug */,
+				58EA521F242F816500929CDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58EA520E242F816500929CDC /* Project object */;
+}
