@@ -1,0 +1,3 @@
+module ObjCLibB {
+    header "ObjcLibBUmbrellaHeader.h"
+}
